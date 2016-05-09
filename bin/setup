@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-#!/usr/bin/env ruby
-=======
 #!/usr/bin/env ruby.exe
->>>>>>> dbcca4978b450d3c82112cec0802eeda4ea0f96f
+#!/usr/bin/env ruby
 require 'pathname'
 
 # path to your application root.
