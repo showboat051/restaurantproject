@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var image = "<%= asset_path 'peru-icon.png'%>"
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      icon: image
+  });
