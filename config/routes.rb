@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  resources :cities
+  root 'welcome#index' 
+  
+
+
+  get 'homepage' => 'welcome#index' 
+
+  
+
 
 
 
@@ -12,9 +21,12 @@ Rails.application.routes.draw do
   get 'about-us'=> 'welcome#about'
   get 'our-mission' => 'welcome#ourmission'
   get 'contact-us' =>'welcome#contact'
- 
-  
+
   # root 'welcome#index'
+
+
+  # root 'welcome#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
