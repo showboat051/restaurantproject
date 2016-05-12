@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get 'about-us'=> 'welcome#about'
   get 'our-mission' => 'welcome#ourmission'
   get 'contact-us' =>'welcome#contact'
+ 
+  
   # root 'welcome#index'
 
   # Example of regular route:
