@@ -1,9 +1,14 @@
 source 'https://rubygems.org'
 
+<<<<<<< HEAD
 gem 'yelp', require: 'yelp'
 
 gem 'httparty'
 
+=======
+gem 'httparty'
+
+>>>>>>> a2a8c23d23cf81f85224ddfe936ff147fceb3a33
 gem 'figaro'
 
 gem 'materialize-sass'

@@ -5,15 +5,31 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-</head>
+  
+   <nav>
+    <div class="nav-wrapper">
+     
+      <u>Food 4 Thought</u>
 
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        
+        <a class="About Us" href="/about-us">About Us</a>
+        <a class="Our Mission" href="/our-mission">Our Mission</a>
+        <a class="Contact Us" href="/contact-us">Contact Us</a>
+      </ul>
+    </div>
+  </nav>
+</head>
 <body>
   
-  <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?">
- </script>
+<div class="container"></div>
+<br>
+<br>
 
 <%= yield %>
+
+
+
 
 </body>
 </html>
