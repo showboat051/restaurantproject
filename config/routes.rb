@@ -1,29 +1,19 @@
 Rails.application.routes.draw do
-  resources :cities
-  root 'welcome#index' 
+  root 'welcome#index'
   
-
-
-  get 'homepage' => 'welcome#index' 
-
-  
-
-
-
-
-
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
   get 'about-us'=> 'welcome#about'
   get 'our-mission' => 'welcome#ourmission'
   get 'contact-us' =>'welcome#contact'
 
   # root 'welcome#index'
-
+  
+  post "/restaurant" => "restaurant#show"
+  
+end
 
   # root 'welcome#index'
 
@@ -76,4 +66,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #     end
-end

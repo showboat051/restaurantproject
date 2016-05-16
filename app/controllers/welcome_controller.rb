@@ -1,19 +1,13 @@
 class WelcomeController < ApplicationController
-<<<<<<< HEAD
-=======
-  def index
+  protect_from_forgery
+  skip_before_action :verify_authenticity_token
+  
+  def home
   end
 
-  def about
+  def restaurant
+    @location = params[:location]
+    @price_range = params[:price_range]
   end
-
-  def ourmission
-  end
-
-  def contact
-  end
->>>>>>> d99bc88fee48e487b902eb011db908ac8524ecb3
 end
-
-
 
