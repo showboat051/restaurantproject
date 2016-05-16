@@ -5,20 +5,31 @@ class WelcomeController < ApplicationController
   
   def about
   end
-<<<<<<< HEAD
+
   
   def contact 
   end
-=======
 
   def ourmission
   end
 
   def contact
   end
->>>>>>> d99bc88fee48e487b902eb011db908ac8524ecb3
+
+
+
+
+
+  protect_from_forgery
+  skip_before_action :verify_authenticity_token
+  
+  def home
+  end
+
+  def restaurant
+    @location = params[:location]
+    @price_range = params[:price_range]
+  end
 end
 
 
-
->>>>>>> a2a8c23d23cf81f85224ddfe936ff147fceb3a33

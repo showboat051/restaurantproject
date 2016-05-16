@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <h1 align="center">
     <u>FOOD 4 THOUGHT</u>
     
@@ -22,13 +22,23 @@
    <input type="submit" class="locator__submit" value="Find me a place to eat!">
    </div>
     
-=======
+
+   
+<form method="post" action="<%= restaurant_path %>">
     <div align="center">
         
+    <input class="locator__search" placeholder="Where are you at?" type="text" name="location" id="locationsearch" autocomplete="on">
     
-    <input class="locator__search" placeholder="Where are you at?" type="text" id="locationsearch" autocomplete="on">
+    <div class="input-field col s12">
+    <select>
+    <option value="" disabled selected>What's your price range?</option>
+    <option value="$">$</option>
+    <option value="$$">$$</option>
+    <option value="$$$">$$$</option>
+    <option value="$$$$">$$$$</option>
+    </select>
+    </div>    
     
-    <input class="locator__search" placeholder="What's the price range?" type="text" id="locationsearch" autocomplete="on">
     <input type="submit" class="locator__submit" value="Find me a place to eat!">
     <input type="submit" class="locator__submit" value="I'm so hungry, choose something random!">
     </div>
@@ -38,4 +48,6 @@
     <script>
         $("#locationsearch").geocomplete();
     </script>    
->>>>>>> a2a8c23d23cf81f85224ddfe936ff147fceb3a33
+    
+  </form>
+

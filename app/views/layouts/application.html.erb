@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FOOD 4 THOUGHT</title>
+  <title></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   
+
+  
    <nav>
     <div class="nav-wrapper">
+    
+    <a href="Food 4 Thought"></a>
+    
+    <a id align="middle">Logo</a>
+    <a id="logo-container" href="#" class="brand-logo"></a>
      
-      <u>Food 4 Thought</u>
-
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
         
+        <a href="Food 4 Thought"></a>
         <a class="About Us" href="/about-us">About Us</a>
         <a class="Our Mission" href="/our-mission">Our Mission</a>
         <a class="Contact Us" href="/contact-us">Contact Us</a>
@@ -21,7 +27,7 @@
   </nav>
 </head>
 <body>
-  
+    
 <div class="container"></div>
 <br>
 <br>
@@ -29,7 +35,13 @@
 <%= yield %>
 
 
-
+<script>
+  
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+       
+</script>
 
 </body>
 </html>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   namespace :api do
   namespace :v1 do
     get 'food/list'
@@ -30,24 +31,23 @@ Rails.application.routes.draw do
 
   get 'homepage' => 'welcome#index' 
 
+=======
+  root 'welcome#index'
+>>>>>>> 6fd7a7bfd6fced2c057005fc7a8e5aa96346fa60
   
-
-
-
-
-
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
   get 'about-us'=> 'welcome#about'
   get 'our-mission' => 'welcome#ourmission'
   get 'contact-us' =>'welcome#contact'
 
   # root 'welcome#index'
-
+  
+  post "/restaurant" => "restaurant#show"
+  
+end
 
   # root 'welcome#index'
 
@@ -100,4 +100,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #     end
-end
