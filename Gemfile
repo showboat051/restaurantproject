@@ -1,6 +1,12 @@
 source 'https://rubygems.org'
 
+gem 'yelp', require: 'yelp'
 
+gem 'httparty'
+
+gem 'figaro'
+
+gem 'materialize-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
@@ -35,6 +41,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'awesome_print'
 end
 
 group :development do

@@ -1,4 +1,28 @@
 Rails.application.routes.draw do
+  namespace :api do
+  namespace :v1 do
+    get 'food/list'
+    end
+  end
+
+  namespace :api do
+  namespace :v1 do
+    get 'food/show'
+    end
+  end
+
+  namespace :api do
+  namespace :v1 do
+    get 'food/list'
+    end
+  end
+
+  namespace :api do
+  namespace :v1 do
+    get 'food/show'
+    end
+  end
+
   resources :cities
   root 'welcome#index' 
   
