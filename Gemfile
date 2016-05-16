@@ -1,7 +1,14 @@
 source 'https://rubygems.org'
 
+<<<<<<< HEAD
+gem 'yelp', require: 'yelp'
+
 gem 'httparty'
 
+=======
+gem 'httparty'
+
+>>>>>>> a2a8c23d23cf81f85224ddfe936ff147fceb3a33
 gem 'figaro'
 
 gem 'materialize-sass'
@@ -39,6 +46,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'awesome_print'
 end
 
 group :development do

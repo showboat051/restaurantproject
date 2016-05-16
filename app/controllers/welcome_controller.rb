@@ -1,10 +1,13 @@
 class WelcomeController < ApplicationController
-<<<<<<< HEAD
-=======
+
   def index
   end
-
+  
   def about
+  end
+
+  
+  def contact 
   end
 
   def ourmission
@@ -12,8 +15,21 @@ class WelcomeController < ApplicationController
 
   def contact
   end
->>>>>>> d99bc88fee48e487b902eb011db908ac8524ecb3
-end
 
+
+
+
+
+  protect_from_forgery
+  skip_before_action :verify_authenticity_token
+  
+  def home
+  end
+
+  def restaurant
+    @location = params[:location]
+    @price_range = params[:price_range]
+  end
+end
 
 
