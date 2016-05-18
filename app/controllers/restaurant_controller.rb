@@ -14,5 +14,6 @@ class RestaurantController < ApplicationController
       }
       response = Yelp.client.search(@location,  options)
    	
+
    end
 end
