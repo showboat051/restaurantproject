@@ -12,9 +12,12 @@ Rails.application.routes.draw do
   get 'our-mission' => 'welcome#ourmission'
   get 'contact-us' =>'welcome#contact'
 
-  # root 'welcome#index'
+    # root 'welcome#index'
+    
+    
   
-  get "/restaurant" => "restaurant#show"
+  post "restaurant" => "restaurant#show"
+  
   
 end
 

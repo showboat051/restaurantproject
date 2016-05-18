@@ -1,14 +1,11 @@
-<form class="input-field col s12" action="<%=restaurant_path %>">
+<form class="input-field col s12" action="<%=restaurant_path %>" method="post">
     <div align="center">
         <input class="locator__search" name="location" placeholder="Where are you at?" type="text" id="locationsearch" autocomplete="on">
         <div class="input-field col s12">
-            <select name="Type in any food preference">
-              <option value="" disabled selected>?</option>
-              <option value="1">Cheap</option>
-              <option value="2">Expensive</option>
-            </select>
-            <label></label>
-        </div>    
+        <input class="locator__search" name="location" placeholder="What food are you craving?" type="text" id="locationsearch" autocomplete="on">  
+        <div class="input-field col s12">
+    </div>
+    </div>
         <input type="submit" class="locator__submit" value="Find me a place to eat!">
         <input type="submit" class="locator__submit" value="I'm so hungry, choose something random!">
     </div>
