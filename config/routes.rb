@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   
   post "restaurant" => "restaurant#show"
   
+  get "Yes, Let's Go!" => 'restaurant#page'
+  
+  get "No, Let's try Again!" => 'welcome#index'
+  
   
 end
 

@@ -16,7 +16,8 @@ class RestaurantController < ApplicationController
       response = Yelp.client.search(@location, options)
    
       @restaurant = response.businesses[0]
-      @rating = response.businesses[0].rating
+       @rating = response.businesses[0].rating
+       @image = response.businesses[0].rating_img_url
    end
 end
 

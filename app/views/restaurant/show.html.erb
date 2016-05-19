@@ -9,7 +9,11 @@
 
 </div>
 
-    <h1><%= @restaurant.name %></h1>
+    <h1><%= @restaurant.name %>
+     		<%= @restaurant.rating%>
+     		<%= image_tag @restaurant.image_url %>
+	 </h1>
+	 <p><%= @restaurant.url %></p>
     <div form="comments"></div>
     <div id="map"></div>
      <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
