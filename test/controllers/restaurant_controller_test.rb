@@ -7,3 +7,4 @@ class RestaurantControllerTest < ActionController::TestCase
   end
 
 end
+

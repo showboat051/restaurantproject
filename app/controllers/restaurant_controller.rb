@@ -7,12 +7,16 @@ class RestaurantController < ApplicationController
    
    def show
       @location = params[:location]
+      @food_type = params[:food_type]
       options = { 
-         term: 'food',
+         term: @food_type,
          limit: 5,
          category_filter: 'restaurants'
       }
-      response = Yelp.client.search(@location,  options)
-   	
+      response = Yelp.client.search(@location, options)
+   
+      @restaurant = response.businesses[0]
+      @rating = response.businesses[0].rating
    end
 end
+
