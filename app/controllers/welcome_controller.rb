@@ -1,25 +1,4 @@
 class WelcomeController < ApplicationController
-
-  def index
-  end
-  
-  def about
-  end
-
-  
-  def contact 
-  end
-
-  def ourmission
-  end
-
-  def contact
-  end
-
-
-
-
-
   protect_from_forgery
   skip_before_action :verify_authenticity_token
   
@@ -28,8 +7,7 @@ class WelcomeController < ApplicationController
 
   def restaurant
     @location = params[:location]
-    @price_range = params[:price_range]
+    @price_range = food_type[:food_type]
   end
 end
-
 

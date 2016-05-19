@@ -1,40 +1,9 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  namespace :api do
-  namespace :v1 do
-    get 'food/list'
-    end
-  end
 
-  namespace :api do
-  namespace :v1 do
-    get 'food/show'
-    end
-  end
-
-  namespace :api do
-  namespace :v1 do
-    get 'food/list'
-    end
-  end
-
-  namespace :api do
-  namespace :v1 do
-    get 'food/show'
-    end
-  end
-
-  resources :cities
   root 'welcome#index' 
   
-
-
   get 'homepage' => 'welcome#index' 
 
-=======
-  root 'welcome#index'
->>>>>>> 6fd7a7bfd6fced2c057005fc7a8e5aa96346fa60
-  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -43,9 +12,12 @@ Rails.application.routes.draw do
   get 'our-mission' => 'welcome#ourmission'
   get 'contact-us' =>'welcome#contact'
 
-  # root 'welcome#index'
+    # root 'welcome#index'
+    
+    
   
-  post "/restaurant" => "restaurant#show"
+  post "restaurant" => "restaurant#show"
+  
   
 end
 

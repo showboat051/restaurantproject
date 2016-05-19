@@ -5,9 +5,3 @@ Yelp.client.configure do |config|
   config.token = '8LaPvp0lO5yqznjQz0aCHSPWPJhR7Zmr'
   config.token_secret = 'iYaEzbHP1JQ4x2Ra5FsV6-oEHZg'
 end
-
-Yelp.client.search('Dallas', { term: 'food' })
-
-
-
-

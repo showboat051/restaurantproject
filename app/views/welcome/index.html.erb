@@ -1,53 +1,19 @@
-
-<h1 align="center">
-    <u>FOOD 4 THOUGHT</u>
-    
-<h2 align="left">
-<h2>About Us
-<h2 align="right">
-</h2>    
-<h2>Our Mission
-<h2 align="left">
-</h2>
-
-<h2>Contact Us
-<h2 align="left">
-</h2>
-    
-<p>Good Day! Help us help you figure out your next meal!</p>
-
- <div align="center">
-   <input class="locator__search" placeholder="Where are you at?" type="text" id="locationsearch" autocomplete="on">
-   <input class="locator__search" placeholder="What's the price range?" type="text" id="locationsearch" autocomplete="on">
-   <input type="submit" class="locator__submit" value="Find me a place to eat!">
-   </div>
-    
-
-   
-<form method="post" action="<%= restaurant_path %>">
+<form class="input-field col s12" action="<%=restaurant_path %>" method="post">
     <div align="center">
-        
-    <input class="locator__search" placeholder="Where are you at?" type="text" name="location" id="locationsearch" autocomplete="on">
-    
-    <div class="input-field col s12">
-    <select>
-    <option value="" disabled selected>What's your price range?</option>
-    <option value="$">$</option>
-    <option value="$$">$$</option>
-    <option value="$$$">$$$</option>
-    <option value="$$$$">$$$$</option>
-    </select>
-    </div>    
-    
-    <input type="submit" class="locator__submit" value="Find me a place to eat!">
-    <input type="submit" class="locator__submit" value="I'm so hungry, choose something random!">
+        <input class="locator__search" name="location" placeholder="Where are you at?" type="text" id="locationsearch" autocomplete="on">
+        <div class="input-field col s12">
+        <input class="locator__search" name="location" placeholder="What food are you craving?" type="text" id="locationsearch" autocomplete="on">  
+        <div class="input-field col s12">
+    </div>
+    </div>
+        <input type="submit" class="locator__submit" value="Find me a place to eat!">
+        <input type="submit" class="locator__submit" value="I'm so hungry, choose something random!">
     </div>
     
     <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.min.js"></script>
     <script>
         $("#locationsearch").geocomplete();
-    </script>    
-    
-  </form>
+    </script>
+</form>
 
