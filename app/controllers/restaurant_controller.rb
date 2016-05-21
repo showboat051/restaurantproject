@@ -18,6 +18,10 @@ class RestaurantController < ApplicationController
        @restaurant = response.businesses[0]
        @rating = response.businesses[0].rating
        @image = response.businesses[0].rating_img_url
+       @url = response.businesses[0].url
+       @address = response.businesses[0].location.display_address
+       @latitude = response.businesses[0].location.coordinate.latitude
+       @longitude = response.businesses[0].location.coordinate.longitude
 
 
    	
