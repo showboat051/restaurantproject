@@ -9,11 +9,9 @@
 
 	 <h1>
 	 		<%= link_to @restaurant.name, @restaurant.url %>
-     		<%= image_tag@restaurant.image_url%>
+     		<%= image_tag@restaurant.image_url %>
      		<%= image_tag @restaurant.rating_img_url %>
-     		<%= @restaurant.location.display_address %>
-     		<%= @restaurant.location.coordinate.latitude %>
-     		<%= @restaurant.location.coordinate.longitude %>
+     		<%= @restaurant.location.display_address.join %>
 
 	 </h1>
     <div form="comments"></div>
