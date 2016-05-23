@@ -22,11 +22,20 @@
         <script>
       var map;
       function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 32.7812034, lng: -96.8064713},
-          zoom: 8
-       });
-      }
+  var myLatLng = new google.maps.LatLng(<%= @restaurant.location.coordinate.latitude %>, <%= @restaurant.location.coordinate.longitude  %>);
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: myLatLng
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Go Eat!'
+  });
+}
+       
     </script>
 
      
