@@ -18,7 +18,6 @@ Rails.application.routes.draw do
   
   post "restaurant" => "restaurant#show"
   
-  
 end
 
   # root 'welcome#index'
