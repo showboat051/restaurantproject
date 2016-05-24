@@ -5,24 +5,36 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  
+ 
+<style>
+   body {
+border: 5px solid "light-blue lighten-3";
+}
+</style> 
+
 
   
-   <nav>
-    <div class="nav-wrapper">
-    
-    <a href="homepage">Food 4 Thought</a>
+   <nav class="light-blue lighten-3">
+   
+   <div class="nav-wrapper">
+       <img class="logo" <%= image_tag ("brainpic.jpg") %>
+  <a href="/" class="brand-logo">FOOD 4 THOUGHT</a> 
+  
 
-    <a id="logo-container" href="#" class="brand-logo"></a>
-     
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-        
-        <a class="About Us" href="/about-us">About Us</a>
-        <a class="Our Mission" href="/our-mission">Our Mission</a>
-        <a class="Contact Us" href="/contact-us">Contact Us</a>
+   <ul id="nav-mobile" class="right hide-on-med-and-down">
+       <img class="logo2" <%= image_tag ("brainpic2.jpg.png") %>
+        <li><a class="About Us" href="/about-us">About Us</a></li>
+        <li><a class="Our Mission" href="/our-mission">Our Mission</a></li>
+        <li><a class="Contact Us" href="/contact-us">Contact Us</a></li>
+
       </ul>
+
+    
     </div>
+
   </nav>
+
+
 </head>
 <body>
     
@@ -31,7 +43,6 @@
 <br>
 
 <%= yield %>
-
 
 <script>
   

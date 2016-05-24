@@ -1,19 +1,40 @@
-<form class="input-field col s12" action="<%=restaurant_path %>" method="post">
-    <div align="center">
-        <input class="locator__search" name="location" placeholder="Where are you at?" type="text" id="locationsearch" autocomplete="on">
-        <div class="input-field col s12">
-        <input class="locator__search" name="food_type" placeholder="What food are you craving?" type="text" id="locationsearch" autocomplete="on">  
-        <div class="input-field col s12">
-    </div>
-    </div>
-        <input type="submit" class="locator__submit" value="Find me a place to eat!">
+<body>
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+      <h1 class="header center red-text text-lighten-2">Help us help you figure out that next meal!</h1>
+        <div class="row center">
+        </div>
+  
+  <link rel="stylesheet" href="welcome.scss">      
+
+      <h5 class="center blue-text text-lighten-2">Let's start that search.</h5>
+  
+
+      <div class="col s6">
+
+      <form class="input-field " action="<%=restaurant_path %>" method="post">
+      <div align="center" class="search">
+
+        <div class="input-field col s6 m6">
+        <input class="locator__search" name="location" placeholder ="Where are you at?" type="text" id="locationsearch" autocomplete="on">
+        </div>
+        <div class="input-field col s6 m6 ">
+        <input class="locator__search" name="food_type" placeholder ="What food are you craving?" type="text" id="locationsearch" autocomplete="on">  
+        </div>
+
+    <input type="submit" class="locator__submit" value="Find me a place to eat!">
         <input type="submit" class="locator__submit" value="I'm so hungry, choose something random!">
     </div>
+  
     
     <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.min.js"></script>
     <script>
         $("#locationsearch").geocomplete();
     </script>
-</form>
+    </form>
+    </body>
+    
 
