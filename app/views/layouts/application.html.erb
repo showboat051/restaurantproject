@@ -6,15 +6,15 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
  
-<style>
-   body {
-border: 5px solid "light-blue lighten-3";
-}
-</style> 
+  <style>
+    body {
+        border: 5px solid "light-blue lighten-3";
+    }
+  </style> 
 
    <nav class="light-blue lighten-3">
    
-       <img class="logo" <%= image_tag ("brainpic.jpg") %>
+   <img class="logo" <%= image_tag ("brainpic.jpg") %>
   <a href="/" class="brand-logo">FOOD 4 THOUGHT</a> 
   
 
@@ -36,7 +36,7 @@ border: 5px solid "light-blue lighten-3";
 
 
 </head>
-<body>
+<body class="<%= controller_name %> <%= action_name %>">
     
 <div class="container"></div>
 <br>

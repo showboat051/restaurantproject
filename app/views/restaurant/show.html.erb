@@ -1,46 +1,55 @@
-<h1 align="center">GO EAT HERE!</h1>
+ <div align="right"
+            <div class="row">
+         <div class="col s4">
+           <h1 align="center">GO EAT HERE!</h1>
+             <h1 align="center">
+	             <%= link_to @restaurant.name, @restaurant.url %> <%= image_tag @restaurant.rating_img_url %>
+           </h1>
 
-<h1 align="center">
-	     <%= link_to @restaurant.name, @restaurant.url %> <%= image_tag @restaurant.rating_img_url %>
-</h1>
-
-    <div align="center">
+<div>
+<a class="waves-effect waves-light btn" href="/page">Yes, Lets go!</a>
+    <a class="waves-effect waves-light btn" href="/">No, let's try again!</a> 
     
-    <a class="waves-effect waves-light btn" href="/page">Yes, Lets go!</a>
-
-    <a class="waves-effect waves-light btn" href="/">No, let's try again!</a>
     </div>
-    
+      </div>
+
+<div class="col s4">
     <p align="center">
-	     <%= @restaurant.location.display_address.join(" ") %>
-    </p>
-    
+	    <%= @restaurant.location.display_address.join(" ") %>
+            </p>
     <h1 align="center">
-    <%= image_tag @image_url %>
-    </h1>
+        <%= image_tag @image_url %>
+            </h1>
+    </div>
+      
+      
+<div class="col s4">
+    <div id="map"></div>
+         <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"async defer></script>
+            <script>
+            var map;
+            function initMap() {
+            var myLatLng = new google.maps.LatLng(<%= @restaurant.location.coordinate.latitude %>, <%= @restaurant.location.coordinate.longitude  %>);
+             var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 18,
+            zoom: 15,
+            center: myLatLng
+          });
 
-     <div id="map"></div>
-     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"async defer></script>
-     <script>
- 
-        var map;
-      function initMap() {
-  var myLatLng = new google.maps.LatLng(<%= @restaurant.location.coordinate.latitude %>, <%= @restaurant.location.coordinate.longitude  %>);
-
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 18,
-    zoom: 15,
-    center: myLatLng
-  });
-
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: 'Go Eat!'
-  });
-}
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Go Eat!'
+              });
+            }
 </script>
-</script>    
-    
+</script>   
+      </div>
+
+    </div>
+     
+</div>
+    </div>
+</div>
 
 
