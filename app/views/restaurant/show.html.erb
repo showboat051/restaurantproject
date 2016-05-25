@@ -4,22 +4,32 @@
 	     <%= link_to @restaurant.name, @restaurant.url %> <%= image_tag @restaurant.rating_img_url %>
 </h1>
 
- <div id="center">
-    <div id="map">
+    <div align="center">
+    
+    <a class="waves-effect waves-light btn" href="/page">Yes, Lets go!</a>
+
+    <a class="waves-effect waves-light btn" href="/">No, let's try again!</a>
     </div>
- <div class="col s12" <p align="center">
-	     <%= @restaurant.location.display_address( ).join %>
-</p>
-    </div>
+    
+    <p align="center">
+	     <%= @restaurant.location.display_address.join(" ") %>
+    </p>
+    
+    <h1 align="center">
+    <%= image_tag @image_url %>
+    </h1>
+
+     <div id="map"></div>
      <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"async defer></script>
-        <script>
-  
-          var map;
+     <script>
+ 
+        var map;
       function initMap() {
   var myLatLng = new google.maps.LatLng(<%= @restaurant.location.coordinate.latitude %>, <%= @restaurant.location.coordinate.longitude  %>);
 
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 18,
+    zoom: 15,
     center: myLatLng
   });
 
@@ -29,23 +39,8 @@
     title: 'Go Eat!'
   });
 }
-
-
 </script>
-
-
-<p align="center">
-	     <%= @restaurant.location.display_address.join(" ") %>
-</p>
-
-<h1 align="center">
-     	 <%= image_tag @image_url %> 
-    </h1>
+</script>    
     
-  <div align="center">  
-    <a class="waves-effect waves-light btn" href="/page">Yes, Lets go!</a>
 
-    <a class="waves-effect waves-light btn" href="/">No, let's try again!</a>
-</div>
 
-   

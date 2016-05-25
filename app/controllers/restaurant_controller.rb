@@ -15,6 +15,7 @@ class RestaurantController < ApplicationController
       }
       response = Yelp.client.search(@location, options)
 
+      
       @restaurant = response.businesses[0]
       @rating = response.businesses[0].rating
       @image_url = @restaurant.image_url.sub("ms.jpg", "l.jpg")

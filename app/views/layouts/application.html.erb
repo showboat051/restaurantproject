@@ -12,11 +12,8 @@ border: 5px solid "light-blue lighten-3";
 }
 </style> 
 
-
-  
    <nav class="light-blue lighten-3">
    
-   <div class="nav-wrapper">
        <img class="logo" <%= image_tag ("brainpic.jpg") %>
   <a href="/" class="brand-logo">FOOD 4 THOUGHT</a> 
   
@@ -27,7 +24,10 @@ border: 5px solid "light-blue lighten-3";
         <li><a class="Our Mission" href="/our-mission">Our Mission</a></li>
         <li><a class="Contact Us" href="/contact-us">Contact Us</a></li>
 
-      </ul>
+    <a id="logo-container" href="#" class="brand-logo"></a>
+     
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+        
 
     
     </div>
@@ -49,9 +49,9 @@ border: 5px solid "light-blue lighten-3";
   $(document).ready(function() {
     $('select').material_select();
   });
-       
+  
+  
 </script>
-
 
 </body>
 </html>
