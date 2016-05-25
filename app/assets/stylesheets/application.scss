@@ -16,10 +16,29 @@
 @import "materialize"; 
  
 @import "materialize/components/color";
+$primary-color: color("blue", "darken-4") !default;
+
+
+.main-pic {
+    text-align: center;
+}
+
+.logo {
+    height: 70px;
+    width: 80px;
+    ;
+}
+
+.logo2 {
+    height: 70px;
+    width: 80px;
+    align: right;
+}
 $primary-color: color("blue", "lighten-2") !default;
 @import 'materialize';
 
 .search {
     text-align: center;
    }
+
 
