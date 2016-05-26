@@ -3,7 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com
 
 body.welcome.index {
-    background-image: asset_url("backgroundpic.png");
+  /* this is currently set in the view 
+    background-image: url("backgroundpic.png");
+    */
 }
 
 body.welcome.index::before {
